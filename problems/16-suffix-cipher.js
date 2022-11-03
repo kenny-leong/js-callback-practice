@@ -34,7 +34,7 @@ console.log(suffixCipher('incremental progress is very instrumental', cipher2));
 function wordChanger(word, obj) {
   let suffixes = Object.keys(obj);
   for (i=0;i<suffixes.length;i++){
-    if(suffixes[i] === word.slice(word.length - suffixes[i].length)) {
+    if(word.endsWith(suffixes[i])) {
       return obj[suffixes[i]](word);
     }
   }
